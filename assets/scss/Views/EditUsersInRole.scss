@@ -1,0 +1,43 @@
+﻿.buttons-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.editUserRoles {
+    font-size: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #34495e;
+    height: 100%;
+    color: white;
+    border-top: 2px solid #F39C12;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+}
+
+.imput-padding {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1a2027;
+}
+
+.editUserRoles__label {
+    padding-left: 16px;
+}
+
+
+.btn-regular--update {
+    margin: 20px 12px 20px 36px;
+    border: solid !important;
+    border-color: #F39C12 !important;
+    padding: 12px;
+}
+
+.btn-regular--cancel {
+    margin: 20px;
+    color: red;
+    padding: 12px;
+}

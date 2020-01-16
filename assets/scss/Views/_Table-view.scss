@@ -1,0 +1,148 @@
+﻿
+.table {
+    border-spacing: 0px;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+
+    &__head {
+        border-radius: 4px 4px 0 0;
+    }
+
+    &__body {
+
+        &.expandible {
+            pointer-events: none;
+            display: none;
+
+            .table__row {
+                background-color: darken(#1F2B37, 5%);
+                height: 72px;
+                border-bottom: 1px solid #1a2733;
+
+                .table__data {
+                    flex: 1;
+                    padding: 0 74px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .active {
+        .table__row {
+            border-left: 3px solid $c-cta;
+        }
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+        height: 85px;
+        background-color: #1F2B37;
+        border-left: 3px solid transparent;
+        border-bottom: 1px solid #2B3E51;
+
+        &--head {
+            background-color: #283644;
+            border-radius: 4px 4px 0 0 !important;
+            border-top: 4px solid $c-cta;
+            pointer-events: none;
+        }
+
+        &:last-child {
+            border-radius: 0px 0px 4px 4px;
+        }
+
+        &:hover {
+            background-color: lighten(#1F2B37,2%);
+            cursor: pointer;
+            border-left: 3px solid $c-cta;
+        }
+    }
+
+    &__data {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 190px;
+
+        &--header {
+            font-weight: 400;
+        }
+
+        &--icon {
+            &:before {
+                content: '';
+                display: block;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-right: 16px;
+                width: 21px;
+                height: 21px;
+            }
+
+            &--companies {
+                &:before {
+                    background-image: url(../images/icons/Companies.svg);
+                }
+            }
+
+            &--user {
+                &:before {
+                    background-image: url(../images/icons/User.svg);
+                }
+            }
+
+            &--machines {
+                &:before {
+                    background-image: url(../images/icons/Machine.svg);
+                }
+            }
+
+            &--jobs {
+                &:before {
+                    background-image: url(../images/icons/Job.svg);
+                }
+            }
+        }
+
+        &--start {
+            padding-left: 74px;
+            position: relative;
+        }
+
+
+        &--end {
+            height: inherit;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 74px;
+        }
+
+        .action {
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+
+            &--edit {
+                background-color: #F1C40F;
+                background-image: url(../images/icons/Edit.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &--delete {
+                background-color: #E74C3C;
+                background-image: url(../images/icons/Delete.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}

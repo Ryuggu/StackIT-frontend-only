@@ -1,0 +1,50 @@
+﻿/* Custom scrollbar */
+
+/* Bredde på scrollwheel */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Baggrundsfarve */
+::-webkit-scrollbar-track {
+    background: #273646;
+}
+
+/* Scrollwheel */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #7a4e09 0%, #f39c12 100%);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f39c12;
+}
+
+.boxview {
+    /* Custom scrollbar in BoxView */
+
+    /* Bredde på scrollwheel */
+    & ::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    /* Baggrundsfarve */
+    & ::-webkit-scrollbar-track {
+        background: #273646;
+    }
+
+    /* Scrollwheel */
+    & ::-webkit-scrollbar-thumb {
+        background: linear-gradient(0deg, $c-primary-dark 0%, $c-primary 100%);
+        transition: 0.3s;
+        border-radius: 4px;
+    }
+
+    /* Hover */
+    & ::-webkit-scrollbar-thumb:hover {
+        background: #f39c12;
+    }
+
+}

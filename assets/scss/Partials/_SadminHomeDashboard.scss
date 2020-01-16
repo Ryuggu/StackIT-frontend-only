@@ -1,0 +1,80 @@
+﻿/*_SadminHomeDashboard*/
+
+.customer-view {
+    font-size: 12px;
+    padding-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #1F2B37;
+    color: white;
+    margin-bottom: 1px;
+}
+
+.customer-view__icon {
+    padding: 30px 16px 30px 60px;
+}
+
+.customer-view__cell {
+    min-width: 140px;
+    padding: 40px 180px 0px 0px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.customer-view__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.customer-view--edit {
+    margin-left: auto;
+}
+
+.customer-view--abort {
+    margin: 0px 52px 0px 8px;
+}
+
+.customer-view__cell--header {
+    min-width: 140px;
+    padding: 40px 84px 20px 96px;
+}
+
+.customer-view__cell--header:last-child {
+    padding-right: 0px;
+    margin-left: auto;
+    min-width: 100px;
+}
+
+.customer-view--header {
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #283644;
+    color: white;
+}
+
+/*Add customer button*/
+.add-customer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 44px;
+    background-color: #24303C;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 20px 48px 40px auto;
+    border: 2px solid #F39C12;
+    border-radius: 4px 4px 4px 0px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+}
+
+.add-customer__text {
+    padding-right: 20px;
+}

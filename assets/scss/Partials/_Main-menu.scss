@@ -1,0 +1,47 @@
+﻿.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $c-primary-dark;
+    @include flex(column, center, flex-start);
+    width: 145px;
+    height: 100vh;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+
+    &__item {
+        width: 145px;
+        height: 145px;
+        @include flex-center;
+        border-bottom: 1px solid lighten( $c-primary-dark, 5% );
+
+
+        &--logo {
+            height: 126px;
+        }
+
+        a {
+            @include flex(column, center, center);
+            width: inherit;
+            height: inherit;
+            color: #ffffff;
+            padding: 16px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            transition: all 150ms ease;
+
+            &:hover {
+                background-color: rgba( $c-cta, .4 );
+            }
+
+            img {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .active {
+        background: linear-gradient(0deg, rgba(122,78,9,1) 0%, rgba(243,156,18,1) 100%);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.22);
+    }
+}

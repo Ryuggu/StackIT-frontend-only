@@ -1,0 +1,274 @@
+﻿.listview {
+    font-size: 12px;
+    padding-left: 16px;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #34495e;
+    height: 100%;
+    width: 80%;
+    color: white;
+    border-radius: 4px 4px 4px 0px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+}
+/*Disabled the ability to click it cause it was turning the adjustCSSOnToggle on and off...*/
+#listview {
+    pointer-events: none;
+}
+
+/*Adust CSS on dropdown toggle*/
+.listview--adjustCSSOnToggle {
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: none;
+}
+
+.listview--machines::before, .listview--jobs::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 8px;
+    border-radius: 4px 0px 0px 0px;
+}
+/*Color for the little square on the left side of a listview item*/
+.listview--machines::before {
+    background-color: #e67e22;
+}
+
+.listview--jobs::before {
+    background-color: #16a085;
+}
+
+.listview__cell {
+    padding: 24px;
+    align-items: center;
+}
+
+/*Min width for the first cell of a listview*/
+.listview__cell:first-of-type {
+    min-width: 96px;
+}
+
+.cell__field {
+    background-color: #2b3b4c;
+    border-radius: 4px;
+    width: 116px;
+    height: 32px;
+    margin-bottom: 16px;
+}
+
+.cell__value, .cell__text--big {
+    font-size: 16px;
+    padding: 8px 0px 0px 0px;
+    text-align: start;
+}
+
+.cell__text, .cell__value {
+    margin-top: -4px;
+}
+
+.cell__value--time, .cell__value--count {
+    margin-left: 16px;
+    font-weight: bold;
+}
+
+.cell__title--big {
+    margin-top: 32px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cell__separator {
+    width: 2px;
+    margin: 22px 0;
+    background: #2C3E50;
+}
+
+.listview__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.listview__button--path, .listview__button--dropdown {
+    margin-left: auto;
+}
+
+.listview__button--cam {
+    margin: 0px 52px 0px 4px;
+}
+
+.listview__button--dropdown {
+    margin-right: 64px;
+    pointer-events: all;
+}
+
+
+/* flip the icon on click*/
+.listview__button--flip {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Safari 3-8 */
+    transform: rotate(180deg);
+    /* 1px margin-top cause it otherwise moves 1px up and it pisses me off*/
+    margin-top: 1px;
+}
+
+
+.listview__footer {
+    /* Padding needed cause of the colored square on the left */
+    padding-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #34495e;
+    height: 24px;
+    width: 80%;
+    color: white;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+}
+
+/*Jobview*/
+
+#jobview__dropdown {
+    display: none;
+}
+
+.jobview {
+    font-size: 12px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 64px;
+    width: 80%;
+    color: white;
+    align-items: center;
+}
+
+.jobview--header {
+    height: 80px;
+}
+
+.jobview:nth-of-type(odd) {
+    background-color: #24303c;
+}
+
+.jobview:nth-of-type(even) {
+    background-color: #1f2b37;
+}
+
+.jobview__cell {
+    width: 200px;
+}
+
+.jobview__cell:first-child {
+    padding-left: 80px;
+}
+
+.jobview__cell--right {
+    margin-left: auto;
+    margin-right: 64px;
+}
+
+.jobview__text {
+    font-size: 14px;
+}
+
+.jobview__text--header {
+    font-weight: bold;
+}
+
+.jobview__icon {
+    padding: 0px 40px 0px 24px;
+}
+
+.jobview__button {
+    margin-left: auto;
+    margin-right: 72px;
+}
+
+
+/*Manage operators + single operator partials*/
+
+.operator-view {
+    font-size: 12px;
+    padding-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #1F2B37;
+    color: white;
+    margin-bottom: 1px;
+}
+
+.operator-view__icon {
+    padding: 30px 16px 30px 60px;
+}
+
+.operator-view__cell {
+    min-width: 140px;
+    padding: 40px 180px 0px 0px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.operator-view__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.operator-view--edit {
+    margin-left: auto;
+}
+
+.operator-view--abort {
+    margin: 0px 52px 0px 8px;
+}
+
+.operator-view__cell--header {
+    min-width: 140px;
+    padding: 40px 84px 20px 96px;
+}
+
+.operator-view__cell--header:last-child {
+    padding-right: 0px;
+    margin-left: auto;
+    min-width: 100px;
+}
+
+.operator-view--header {
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #283644;
+    color: white;
+}
+
+/*Add operator button*/
+.add-operator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 44px;
+    background-color: #24303C;
+    ;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 20px 48px 40px auto;
+    border: 2px solid #F39C12;
+    border-radius: 4px 4px 4px 0px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.75);
+}
+
+.add-operator__text {
+    padding-right: 20px;
+}

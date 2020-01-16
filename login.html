@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+    <main role="main" class="container">
+        
+
+<div class="login">
+    <div class="form-wrapper">
+        <img class="logo" src="/assets/images/StackITLogo.svg" />
+        <form class="login-form" autocomplete="false" method="post">
+
+            <div class="login-form__input-group">
+                <label class="login-form__label" for="Email">Email</label>
+                <input class="login-form__input" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" value="" />
+                <span class="login-form__validation field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="login-form__input-group">
+                <label class="login-form__label" for="Password">Password</label>
+                <input class="login-form__input" type="password" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" />
+                <span class="login-form__validation field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            </div>
+            <div class="login-form__validation validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+
+            <div class="login-form__input-group">
+                <div class="checkbox">
+                    <label for="RememberMe">
+                        <input type="checkbox" data-val="true" data-val-required="The Remember me field is required." id="RememberMe" name="RememberMe" value="true" />
+                        Remember me
+                    </label>
+                </div>
+            </div>
+            <div class="btn-wrapper">
+                <a class="btn login-form__login--btn" href="#"> Login</a>
+                    <a class="btn login-form__register--btn" href="register.html">Register</a>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ka4OSbuq7BGpUHl6WnmawdUWnfd1izoaVhQFviS0dLk7pmjpNlsXd00g7k3eQbaCgP2nY-7GlBxdEoirwkgtTX-gGyvorE7UewKjCI7n_AyhlEeQsPtqvy0qtRdTQFPky8MBhedJ_kSCkdZ4ihhnKw" /><input name="RememberMe" type="hidden" value="false" /></form>
+        <p class="disclaimer">
+            ©2019 All Rights Reserved. STACKIT ApS.
+        </p>
+                                <!--Buttons in this comment are only there to give you access to different dashboards. They're not supposed to be there once the site is live.-->
+                                <button type="submit" class="btn login-form__login--btn"><a href="/S_admin/home.html">Login S_admin</a></button>
+                                <button type="submit" class="btn login-form__login--btn"><a href="/K_admin/home.html">Login K_admin</a></button>
+                                <button type="submit" class="btn login-form__login--btn"><a href="/K_operator/home.html">Login K_operator</a></button>
+                                <!--End-->
+    </div>
+</div>
+
+
+
+    </main>
+</body>
+
+</html>

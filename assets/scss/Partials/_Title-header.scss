@@ -1,0 +1,41 @@
+﻿.title-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .title {
+        font-size: 24px;
+        color: white;
+        font-weight: 400;
+    }
+
+    .split {
+        height: 24px;
+        margin: 0 24px;
+        display: inline-block;
+        width: 2px;
+        background-color: #34495E;
+    }
+
+    .count {
+        background-color: white;
+        padding: 1px 8px;
+        width: 32px;
+        border-radius: 10px;
+        height: 22px;
+        color: #24303C;
+        font-weight: bold;
+        font-size: 12px;
+        @include flex-center;
+
+        &--machine {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        &--job {
+            background-color: #27ae60;
+            color: white;
+        }
+    }
+}

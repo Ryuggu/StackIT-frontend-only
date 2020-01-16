@@ -1,0 +1,72 @@
+﻿input {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.sortandsearch {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sortandsearch-wrapper {
+    display: flex;
+    margin: 0 0 0 auto;
+}
+
+.sortby { 
+    color: #F39C12;
+    margin-right: 24px;
+}
+
+.sort, .search {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px $c-primary-dark;   
+    display: flex;
+    outline: none;
+}
+
+.sortandsearch-option {
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.sort, sortby {
+    min-width: 100px;
+    margin-left: 0px;
+    margin-right: 48px;
+    color: $c-primary-dark;
+    background: none;
+}
+
+.search {
+    color: $c-primary-dark;
+    background: none;
+    min-width: 100px;
+    margin-left: 0px;
+}
+
+.soog-img {
+    border: none;
+    background: none;
+}
+
+.sortandsearch-input {
+    background: none;
+}
+
+[type="search"] {
+    max-width: 120px;
+    margin-right: 50px;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none; 
+    width: 0;
+    height: 0;
+}

@@ -1,0 +1,23 @@
+﻿.content-grid {
+    width: 100%;
+    display: grid;
+    justify-items: stretch;
+    align-content: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+
+// grid breakpoints
+
+@media only screen and (max-width: $screensize-medium) {
+  .content-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: $screensize-small) {
+  .content-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

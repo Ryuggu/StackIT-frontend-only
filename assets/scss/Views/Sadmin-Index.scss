@@ -1,0 +1,56 @@
+﻿.cell__field--cam {
+    min-width: 240px;
+    margin-right: 24px;
+}
+
+.cell__title--wide {
+    min-width: 120px;
+}
+
+.error-view-title {
+    width: 200px;
+}
+
+.recent-errors--header {
+    display: flex;
+    margin-top: 40px;
+}
+
+.recent-errors--icon {
+    margin-right: 16px;
+    padding-bottom: 16px;
+}
+
+.error-view {
+    font-size: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 64px;
+    color: white;
+    background-color: #283644;
+    align-items: center;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.error-view__cell {
+    width: 320px;
+    font-size: 16px;
+}
+
+.error-view__cell:first-of-type {
+    padding-left: 28px;
+}
+
+.error-view:nth-of-type(odd) {
+    background-color: #1f2b37;
+}
+
+.error-view:nth-of-type(even) {
+    background-color: #24303c;
+}
+
+.error-view:last-of-type {
+    border-radius: 0px 0px 4px 4px;
+}

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+    <main role="main" class="container">
+        
+
+<div class="row register">
+    <header class="title-header">
+        <h1 class="title">User registration</h1>
+    </header>
+
+    <div class="col-md-12">
+        <form method="post">
+            <div class="text-danger validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+            <div class="form-group">
+                <label for="FirstName">FirstName</label>
+                <input class="form-control" type="text" data-val="true" data-val-required="The FirstName field is required." id="FirstName" name="FirstName" value="" />
+            </div>
+            <div class="form-group">    
+                <label for="LastName">LastName</label>
+                <input class="form-control" type="text" data-val="true" data-val-required="The LastName field is required." id="LastName" name="LastName" value="" />
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input class="form-control" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input class="form-control" type="password" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword">Confirm password</label>
+                <input class="form-control" type="password" data-val="true" data-val-equalto="Password and confirmation password do not match" data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label for="City">City</label>
+                <input class="form-control" type="text" id="City" name="City" value="" />
+            </div>
+            <button type="submit" href="login.html" class="btn-regular btn-regular--register"><a href="login.html">Register</a></button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ka4OSbuq7BGpUHl6WnmaweXWXCiKE7KcJJleYEP2kuiGcN7jcbG2bTOMoYU9WrOUj--1SB4PzXERM9OZWQcIFuDEJgsWHhM1u8KFBW5_wDUaGoYQ5bMQCwd6FkwXN8k9iEijA924MWKMi16KObnoNM" /></form>
+    </div>
+</div>
+    </main>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/js/site.js?v=Z33bVA1ZW9s-B9SEvPg9gfces-g8NTnnUNj3PBSEW-Y"></script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/Administration">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/Administration/ListUsers">
+                            <img src="/assets/images/icons/User.svg" />
+                            Manage Users
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/Administration/ListCompanies">
+                            <img src="/assets/images/icons/Companies.svg" />
+                            Manage Companies
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/Administration/ListRoles">
+                            <img src="/assets/images/icons/Key.svg" />
+                            Manage Roles
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item">
+                        <a href="/Administration">Dashboard</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <form method="post" action="/Account/Logout">
+                    <button class="logout" type="submit">Logout</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ka4OSbuq7BGpUHl6WnmaweIlvnyKeVAFddFYlCuOkWvfYefQ4OCZcS5Qf0UqCHKMMXo4aPI_WqBqc2hpems8itHqGYCtdcGm6RuKKL7N046esZZjwuLAypmgVlF068do_T-Jo1VB7akWFf_FbBaYSG35DS26JjFnpT0PtVmXEqMTqc4geXXNwSFMmjvIMfzTw" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+
+<header class="title-header">
+    <h1 class="title">Stack build requests (stattic page)</h1>
+    <span class="split"></span>
+    <div class="count">3</div>
+</header>
+
+<!--Request 1-->
+<div class="listview listview--requests">
+    <div class="listview__cell">
+        <p class="cell__title error-view-title">Request title</p>
+        <p class="cell__text cell__text--big">Gevind 8,4mm Tribot-CC1</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Status</p>
+        <p class="cell__text cell__text--big">Awaiting</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title cell__title--wide">Request date</p>
+        <p class="cell__text cell__text--big">1 hour ago</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Requested By</p>
+        <p class="cell__text cell__text--big">Allan Hyde</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Company</p>
+        <p class="cell__text cell__text--big">Odense Robotniks</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Request ID</p>
+        <p class="cell__text cell__text--big">#1876</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Job file</p>
+        <div class="cell__field cell__field--cam">
+            <p class="cell__value cell__value--time">cc-unit_120919.cam</p>
+        </div>
+    </div>
+    <div class="customer-view__button customer-view--edit" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/edit_button.svg" alt="edit"></div>
+    <div class="customer-view__button customer-view--abort" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/abort_button.svg" alt="abort"></div>
+</div>
+
+<!--Request 2-->
+<div class="listview listview--requests">
+    <div class="listview__cell">
+        <p class="cell__title error-view-title">Request title</p>
+        <p class="cell__text cell__text--big">Flat screws 6mm Brass</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Status</p>
+        <p class="cell__text cell__text--big">Awaiting</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title cell__title--wide">Request date</p>
+        <p class="cell__text cell__text--big">2 hours ago</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Requested By</p>
+        <p class="cell__text cell__text--big">Signe Hyde</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Company</p>
+        <p class="cell__text cell__text--big">Odense Robotniks</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Request ID</p>
+        <p class="cell__text cell__text--big">#1876</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Job file</p>
+        <div class="cell__field cell__field--cam">
+            <p class="cell__value cell__value--time">cc-unit_120919.cam</p>
+        </div>
+    </div>
+    <div class="customer-view__button customer-view--edit" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/edit_button.svg" alt="edit"></div>
+    <div class="customer-view__button customer-view--abort" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/abort_button.svg" alt="abort"></div>
+</div>
+
+<!--Request 3-->
+<div class="listview listview--jobs listview--last">
+    <div class="listview__cell">
+        <p class="cell__title error-view-title">Request title</p>
+        <p class="cell__text cell__text--big">Screws 6mm Stainless steel</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Status</p>
+        <p class="cell__text cell__text--big">Awaiting</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Time Left</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--time">02:23</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Requested By</p>
+        <p class="cell__text cell__text--big">Allan Hyde</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Company</p>
+        <p class="cell__text cell__text--big">Odense Robotniks</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Request ID</p>
+        <p class="cell__text cell__text--big">#1876</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Job file</p>
+        <div class="cell__field cell__field--cam">
+            <p class="cell__value cell__value--time">cc-unit_120919.cam</p>
+        </div>
+    </div>
+    <div class="customer-view__button customer-view--edit" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/edit_button.svg" alt="edit"></div>
+    <div class="customer-view__button customer-view--abort" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/abort_button.svg" alt="abort"></div>
+</div>
+
+
+
+<div class="content-grid">
+    
+<div class="boxview boxview--warning">
+    <header class="boxview__header">
+        <img class="boxview__icon" src="/assets/images/icons/Machine.svg" />
+        <h3>Machines Active</h3>
+        <span class="number">14</span>
+    </header>
+    <ul class="boxlist">
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #4 (Odense Robotbiks A/S)</span><span class="boxlist__item-value">Stack #18</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1 (Odense Robotbiks A/S)</span><span class="boxlist__item-value">Stack #30</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #7 (NyborgTech)</span><span class="boxlist__item-value">Stack #14</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #2 (Æble Computere)</span><span class="boxlist__item-value">Stack #304</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1 (Sana Bots)</span><span class="boxlist__item-value">Stack #11</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #2 (Sana Bots)</span><span class="boxlist__item-value">Stack #30</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1 (Robo Brøndby)</span><span class="boxlist__item-value">Stack #223</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #2 (Robo Brøndby)</span><span class="boxlist__item-value">Stack #224</span></li>
+    </ul>
+</div>
+
+<div class="boxview">
+    <header class="boxview__header">
+        <img class="boxview__icon" src="/assets/images/icons/User.svg" />
+        <h3>Recent User Activity</h3>
+    </header>
+    <ul class="boxlist">
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/User.svg" /><span class="boxlist__item-title">New User Simon Aagaard (Odense Robotbiks A/S)</span><span class="boxlist__item-value">20 mins ago</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/User.svg" /><span class="boxlist__item-title">Permissions Changed for Allan Hyde (Odense Robotbiks A/S)</span><span class="boxlist__item-value">20 mins ago</span></li>
+    </ul>
+</div>
+    
+<div class="boxview boxview--addnew">
+    <h3>Add View to Dashboard</h3>
+    <img class="boxview__icon" src="/assets/images/icons/addviewtodash.svg" />
+</div>
+</div>
+<div class="error-view machine-view--header">
+    <div class="error-view__cell">
+        <p class="machine-view__text machine-view__text--header">Machine Name</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="machine-view__text machine-view__text--header">Machine Role</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="machine-view__text machine-view__text--header">Machine ID</p>
+    </div>
+</div>
+
+<div class="error-view">
+    <div class="error-view__cell">
+        <p class="error-view__text">8mm Brass Screws</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">04:35</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">02:12</p>
+    </div>
+</div>
+<div class="error-view">
+    <div class="error-view__cell">
+        <p class="error-view__text">8mm Brass Screws</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">04:35</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">02:12</p>
+    </div>
+</div>
+<div class="error-view">
+    <div class="error-view__cell">
+        <p class="error-view__text">8mm Brass Screws</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">04:35</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">02:12</p>
+    </div>
+</div>
+<div class="error-view">
+    <div class="error-view__cell">
+        <p class="error-view__text">8mm Brass Screws</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">04:35</p>
+    </div>
+    <div class="error-view__cell">
+        <p class="error-view__text">02:12</p>
+    </div>
+</div>
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

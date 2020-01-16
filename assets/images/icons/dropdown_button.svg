@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <filter id="Ellipse_11" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.341"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_40" data-name="Group 40" transform="translate(-1730 -444)">
+    <g transform="matrix(1, 0, 0, 1, 1730, 444)" filter="url(#Ellipse_11)">
+      <circle id="Ellipse_11-2" data-name="Ellipse 11" cx="17" cy="17" r="17" transform="translate(3 3)" fill="#f39c12"/>
+    </g>
+    <path id="Polygon_12" data-name="Polygon 12" d="M7,0l7,8H0Z" transform="translate(1757 469) rotate(180)" fill="#fff"/>
+  </g>
+</svg>

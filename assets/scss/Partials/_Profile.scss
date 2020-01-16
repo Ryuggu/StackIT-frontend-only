@@ -1,0 +1,136 @@
+﻿.profile {
+    @include flex(row, center, flex-start);
+    position: relative;
+
+    &__name {
+        color: white;
+        margin-right: 32px;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+        user-select: none;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -16px;
+            top: 6px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid white;
+        }
+
+        &:hover {
+            &:after {
+                border-top: 5px solid $c-cta;
+            }
+        }
+    }
+
+    &__img {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        background-color: white;
+        box-shadow: 3px 3px 6px rgba(0,0,0,0.21);
+        cursor: pointer;
+    }
+
+    .expanded {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+
+.profile-dropdown {
+    position: absolute;
+    top: 116px;
+    z-index: 99;
+    right: 0;
+    width: 290px;
+    background-color: #192027;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+    transition: all 150ms ease;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    border: 1px solid #1e2329;
+
+
+
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 16px;
+        text-align: center;
+        color: white;
+
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            border: 2px solid $c-cta;
+            background-color: white;
+        }
+
+        .name {
+            font-weight: 400;
+            margin: 16px 0 8px 0;
+        }
+
+        .email {
+            font-size: 13px;
+            margin: 0px 0 8px 0;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #4a5763;
+        border-radius: 0 0 4px 4px;
+        font-size: 13px;
+        color: white;
+
+        .logout {
+            @include flex-center;
+            height: 45px;
+            width: 100%;
+            background-color: #c0392b;
+            border: none;
+            border-bottom: 1px solid #273646 !important;
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+            border-radius: 0 0 4px 4px;
+
+
+            &:hover {
+                background-color: darken(#c0392b, 10%);
+            }
+        }
+
+        .help {
+            height: 45px;
+            background-color: #4a5763;
+            @include flex-center;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover {
+                background-color: darken(#4a5763, 10%);
+            }
+        }
+    }
+}

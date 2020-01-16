@@ -1,0 +1,52 @@
+﻿@mixin font_path($name, $path, $srcname, $weight) {
+    $url: "#{$path}/#{$srcname}.ttf";
+
+    font-family: $name;
+    src: url($url);
+    font-weight: $weight;
+}
+
+
+/* FONT PATH*/
+$fonts-path:"../fonts";
+
+/* FONTS SETTTINGS */
+$lh_prim: 1.45em;
+$fc_prim: #ffffff;
+$fw_light: 300;
+$fw_regular: 400;
+$fw_medium: 500;
+$fw_bold: 600;
+$fw_extrabold: 800;
+
+/* IMPORTING FONTS */
+
+@font-face {
+    @include font_path("Gotham", $fonts-path, "hinted-subset-Gotham-Bold", bold);
+}
+
+@font-face {
+    @include font_path("Gotham", $fonts-path, "hinted-subset-Gotham-Book", $fw_regular);
+}
+
+@font-face {
+    @include font_path("Gotham", $fonts-path, "hinted-subset-Gotham-Light", $fw_light);
+}
+
+@font-face {
+    @include font_path("Gotham", $fonts-path, "hinted-subset-Gotham-Medium", $fw_medium);
+}
+
+/* FONTS */
+$font_prim: "Gotham", sans-serif;
+
+
+/* APPLYING FONT */
+
+html, body, input, button {
+    font-family: $font_prim !important;
+    font-weight: $fw_light;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}

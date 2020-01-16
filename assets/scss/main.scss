@@ -1,0 +1,40 @@
+﻿// MIXINS //
+@import "Mixins/_Buttons.scss";
+@import "Mixins/_Flex.scss";
+
+// STYLEGUIDE //
+@import "Styleguide/_Colors.scss";
+@import "Styleguide/_Content.scss";
+@import "Styleguide/_Buttons.scss";
+@import "Styleguide/_CustomScrollWheel.scss";
+@import "Styleguide/_Layout.scss";
+
+
+// GLOBALS //
+@import "Globals/_Normalize.scss";
+@import "Globals/_Fonts.scss";
+@import "Globals/_ContentGrid.scss";
+
+// VIEWS //
+@import "Views/_Login.scss";
+@import "Views/_Table-view.scss";
+@import "Views/Register.scss";
+@import "Views/EditUsersInRole.scss";
+@import "Views/EditRole.scss";
+@import "Views/ListRoles.scss";
+@import "Views/EditCompany.scss";
+@import "Views/Sadmin-Index.scss";
+
+// PARTIALS //
+@import "Partials/_Main-menu.scss";
+@import "Partials/_BoxView.scss";
+@import "Partials/_Secondary-menu.scss";
+@import "Partials/_SadminHomeDashboard.scss";
+@import "Partials/_ManageOperators-OperatorsPermissions.scss";
+@import "Partials/_SearchandSort.scss";
+@import "Partials/_FormPartials.scss";
+@import "Partials/_Secondary-menu.scss";
+@import "Partials/_List-item.scss";
+@import "Partials/_Profile.scss";
+@import "Partials/_Title-header.scss";
+@import "Partials/_BoxView.scss";
