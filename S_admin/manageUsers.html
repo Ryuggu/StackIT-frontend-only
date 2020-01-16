@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ListUsers - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+    <nav class="main-menu">
+        <ul class="nav">
+            <li class="main-menu__item main-menu__item--logo">
+                <img src="/assets/images/StackITLogo.svg" />
+            </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/home.html">
+                                <img src="/assets/images/icons/Home.svg" />
+                                Home
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark active" href="/S_admin/manageUsers.html">
+                                <img src="/assets/images/icons/User.svg" />
+                                Manage Users
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/manageCompanies.html">
+                                <img src="/assets/images/icons/Companies.svg" />
+                                Manage Companies
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/manageRoles.html">
+                                <img src="/assets/images/icons/Key.svg" />
+                                Manage Roles
+                            </a>
+                        </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item active">
+                        <a href="/S_admin/manageUsers.html">User Overview</a>
+                    </li>
+                    <li class="secondary-menu__item">
+                        <a href="/register.html">Add User</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+
+    <header class="title-header">
+        <h1 class="title">Manage Users</h1>
+        <span class="split"></span>
+        <div class="count">14</div>
+        
+    <div class="sortandsearch-wrapper">
+        <p class="sortby">Sort by: </p>
+        <select class="sort">
+            <option class="sortandsearch-option">Time Left</option>
+            <option class="sortandsearch-option">Uptime</option>
+            <option class="sortandsearch-option">Queue</option>
+            <option class="sortandsearch-option">Current</option>
+            <option class="sortandsearch-option">Items Left</option>
+        </select>
+        <form class="search">
+            <button class="soog-img" type="submit"><img src="/assets/images/icons/Soog.svg" /></button>
+            <input class="sortandsearch-input" type="search" placeholder="Search..." />
+        </form>
+    </div>
+
+    </header>
+
+    <div class="table-view">
+
+        <a class="btn btn--orange btn-primary mb-3" style="width:auto" href="/register.html">
+            Add new user
+        </a>
+
+            <table class="table">
+                <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                        <td class="table__data table__data--header table__data--start">Name</td>
+                        <td class="table__data table__data--header">Name</td>
+                        <td class="table__data table__data--header">Email</td>
+                        <td class="table__data table__data--header">Id</td>
+                        <td class="table__data table__data--header table__data--end">Action</td>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
+
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">operator@hotmail.com</td>
+                            <td class="table__data">Jan Jensen</td>
+                            <td class="table__data">operator@hotmail.com</td>
+                            <td class="table__data">267082b6-18fd-4b2e-b681-a18841e9d509</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">grafik@ninachristensen.dk</td>
+                            <td class="table__data">Nina Christensen</td>
+                            <td class="table__data">grafik@ninachristensen.dk</td>
+                            <td class="table__data">2c23a034-3757-4868-bb84-f60bae6a4843</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">ko@hotmail.com</td>
+                            <td class="table__data">John Legend</td>
+                            <td class="table__data">ko@hotmail.com</td>
+                            <td class="table__data">3f06014f-834b-4e11-b57a-eaee6a8043f2</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">Kev-mangkornkaew@hotmail.com</td>
+                            <td class="table__data">Harry Kane</td>
+                            <td class="table__data">Kev-mangkornkaew@hotmail.com</td>
+                            <td class="table__data">52cc3244-8416-40a8-b9a9-e6f7c06db8d6</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">admin@admin.com</td>
+                            <td class="table__data">admin admin</td>
+                            <td class="table__data">admin@admin.com</td>
+                            <td class="table__data">5802bcf4-8d5c-40f1-8def-ef7671cec1d2</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">test@test2.com</td>
+                            <td class="table__data">test test2</td>
+                            <td class="table__data">test@test2.com</td>
+                            <td class="table__data">64ea9362-a95d-42cb-80bc-a614ad1157a2</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">test-k_admin@hotmail.com</td>
+                            <td class="table__data">Alexander Larsen</td>
+                            <td class="table__data">test-k_admin@hotmail.com</td>
+                            <td class="table__data">7e9cd611-3be9-4564-8028-dd7d5c8e01c0</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">Ke-mangkornkaew@hotmail.com</td>
+                            <td class="table__data">Mike Jensen</td>
+                            <td class="table__data">Ke-mangkornkaew@hotmail.com</td>
+                            <td class="table__data">823bdcb8-6e23-40ab-8550-6811b14bd0d3</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">test-k_operator@hotmail.com</td>
+                            <td class="table__data">Mikkel Jensen</td>
+                            <td class="table__data">test-k_operator@hotmail.com</td>
+                            <td class="table__data">9a2d683a-2207-4cf6-ba1b-f2b4b2a8b795</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">test-s_admin@hotmail.com</td>
+                            <td class="table__data">Ion Toporan</td>
+                            <td class="table__data">test-s_admin@hotmail.com</td>
+                            <td class="table__data">a643eb5d-c8db-4dc3-8364-3ed702e3a554</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">Testuser@hotmail.com</td>
+                            <td class="table__data">Kevin Nielsen</td>
+                            <td class="table__data">Testuser@hotmail.com</td>
+                            <td class="table__data">ae784249-8b8f-4e09-a6a0-b1ed6e19c4bb</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">k_admin@hotmail.com</td>
+                            <td class="table__data">Niels Henrik</td>
+                            <td class="table__data">k_admin@hotmail.com</td>
+                            <td class="table__data">c415ff71-50bf-4ee2-8458-94f28b02c4fa</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">Kevi-mangkornkaew@hotmail.com</td>
+                            <td class="table__data">Lars Larsen</td>
+                            <td class="table__data">Kevi-mangkornkaew@hotmail.com</td>
+                            <td class="table__data">f46761d1-2083-46ba-85ec-ef3610cc2c3c</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">123@123.com</td>
+                            <td class="table__data">admin123 admin123</td>
+                            <td class="table__data">123@123.com</td>
+                            <td class="table__data">f5cd9d59-a36e-4785-bf10-5d13a3db9a7e</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="editUser.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZFjdKsmNhMEWWiZuMYDr-nqDvrNp6qO-u-dG7kGuJznhvPmIAEQxVa20MFzDxL4vwpqbtGEOA0anBbl9EzgjeUpDpFAoOvHO21AO1YnMcKlz8JrG0LJiw-Sml91w1ldT91wQhcWq2FGRQPVhRJJO7nW61M-Tzay1eCIS7OFCwapvQ" /></form>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+    </div>
+
+
+
+
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EditUser - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+    <nav class="main-menu">
+        <ul class="nav">
+            <li class="main-menu__item main-menu__item--logo">
+                <img src="/assets/images/StackITLogo.svg" />
+            </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark active" href="/S_admin/home.html">
+                                <img src="/assets/images/icons/Home.svg" />
+                                Home
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/manageUsers.html">
+                                <img src="/assets/images/icons/User.svg" />
+                                Manage Users
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/manageCompanies.html">
+                                <img src="/assets/images/icons/Companies.svg" />
+                                Manage Companies
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/manageRoles.html">
+                                <img src="/assets/images/icons/Key.svg" />
+                                Manage Roles
+                            </a>
+                        </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item">
+                        <a href="/S_admin/home.html">Dashboard</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZGzlYzQqK2mZr2eXmzckyc-pQup-CxyXbf9KmSfsDytKFKKVnkRvCXqMkVs1-ENnwF5roz_wqGAE73x5JsqCopBxwTSkEeqhdubKWKGpXi3VuiB2rX0pHis2cYyiOFhEVsJCrKcmpLr1_FaMjNK1EAmVqQSw7EAU51X4eQ1gKTV9Q" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+<header class="title-header">
+    <h1 class="title">Edit user</h1>
+</header>
+
+<form method="post" class="mt-3 boxed-container">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="Id">Id</label>
+        <div class="col-sm-10">
+            <input disabled class="form-control" type="text" id="Id" name="Id" value="267082b6-18fd-4b2e-b681-a18841e9d509">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="Email">Email</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" value="operator@hotmail.com">
+            <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="UserName">User name</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" data-val="true" data-val-required="The UserName field is required." id="UserName" name="UserName" value="operator@hotmail.com">
+            <span class="text-danger field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="City">City</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" id="City" name="City" value="Svenddborg">
+        </div>
+    </div>
+
+    <div class="text-danger validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+
+    <div class="form-group row">
+        <div class="col-sm-10 bottom-buttons">
+            <button type="submit" class="btn-regular btn-regular--small"><a href="/S_admin/manageUsers.html">Update</a></button>
+            <a class="btn-regular btn-regular--small" href="/S_admin/manageUsers.html">Cancel</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="card-header">
+            <h3>User Roles</h3>
+        </div>
+        <div class="card-body">
+              <p class="else-white">None at the moment</p>
+        </div>
+    </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8NmIgUyh_gRNmbYrMvPFbZGzlYzQqK2mZr2eXmzckyc-pQup-CxyXbf9KmSfsDytKFKKVnkRvCXqMkVs1-ENnwF5roz_wqGAE73x5JsqCopBxwTSkEeqhdubKWKGpXi3VuiB2rX0pHis2cYyiOFhEVsJCrKcmpLr1_FaMjNK1EAmVqQSw7EAU51X4eQ1gKTV9Q" /></form>
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/S_admin/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/S_admin/manageUsers.html">
+                            <img src="/assets/images/icons/User.svg" />
+                            Manage Users
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/S_admin/manageCompanies.html">
+                            <img src="/assets/images/icons/Companies.svg" />
+                            Manage Companies
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark active" href="/S_admin/manageRoles.html">
+                            <img src="/assets/images/icons/Key.svg" />
+                            Manage Roles
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item active">
+                        <a href="/Administration/ListRoles">Manage Roles</a>
+                    </li>
+                    <li class="secondary-menu__item">
+                        <a href="/Administration/CreateRole">Add Role</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <form method="post" action="/Account/Logout">
+                    <button class="logout" type="submit">Logout</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO5OABqgWFR1HFeXlOmVd17oX8w87j1C1sVyWqfKMA3j7SLGuLePHiXMjoGgUrooTfelck-LdtbJtXJrQw6VyEx26c5lk0Bmk6dLHIm9j28cNv-dJ4SGFtUokfZHYs12QgGgPz0TMvNyCh1bKrWDKNggrL3ksSnbw9SyVlG44Nsyw" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+
+<header class="title-header">
+    <h1 class="title">Manage Roles</h1>
+</header>
+
+        <div class="role-container">
+            <p class="manageRoles--list">Role Id : 143bcadb-cfb3-41f5-bb1e-885431119d9e</p>
+            <p class="manageRoles--list">Role Name : k_admin</p>
+            <div class="bottom-buttons">
+                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
+            </div>
+        </div>
+        <div class="role-container">
+            <p class="manageRoles--list">Role Id : 5fb4913a-9c68-4771-a806-9b318a3a0f51</p>
+            <p class="manageRoles--list">Role Name : k_operator</p>
+            <div class="bottom-buttons">
+                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
+            </div>
+        </div>
+        <div class="role-container">
+            <p class="manageRoles--list">Role Id : aa1d14b0-21b2-40ce-aec4-11ba362cc3c1</p>
+            <p class="manageRoles--list">Role Name : s_admin</p>
+            <div class="bottom-buttons">
+                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
+            </div>
+        </div>
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

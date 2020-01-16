@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/S_admin/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/S_admin/manageUsers.html">
+                            <img src="/assets/images/icons/User.svg" />
+                            Manage Users
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/S_admin/manageCompanies.html">
+                            <img src="/assets/images/icons/Companies.svg" />
+                            Manage Companies
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/S_admin/manageRoles.html">
+                            <img src="/assets/images/icons/Key.svg" />
+                            Manage Roles
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item">
+                        <a href="/S_admin/home.html">Dashboard</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <form method="post" action="/Account/Logout">
+                    <button class="logout" type="submit">Logout</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDOFUC95nUZtzrlWxvQ5cpz0FRxpJIioyRyISWybq0nqX1kTsaf6pw0KUNfvmA98VWoCcApFNGnkbhaJ4n8nKnjyn-Rn1v-vlilWH3Mqx6iYKUmFGQb6uyp4N4uv3zgokVG0YzHCJJ3p5dLcs-EnRa8Befs9_TWwObQXTgJvnydfWA" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+<header class="title-header">
+    <h1 class="title">Edit company</h1>
+</header>
+
+<form method="post">
+    <div class="editUserRoles">
+        <h2>Add or remove users from Robotics</h2>
+        <div class="manageRoles--list editUserRoles--margin">
+            <label class="label--bold">Company Id :</label>
+            <input disabled type="text" id="companyId" name="companyId" value="5" />
+            <label class="label--bold">Company Name :</label>
+            <input disabled type="text" id="companyName" name="companyName" value="Robotics" />
+        </div>
+        <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+
+        <div>
+            <ul>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z0__UserId" name="[0].UserId" value="2c23a034-3757-4868-bb84-f60bae6a4843" />
+                        <input type="hidden" id="z0__UserName" name="[0].UserName" value="grafik@ninachristensen.dk" />
+                        <input type="checkbox" checked="checked" data-val="true" data-val-required="The IsSelected field is required." id="z0__IsSelected" name="[0].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z0__IsSelected">
+                            grafik@ninachristensen.dk
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z1__UserId" name="[1].UserId" value="3f06014f-834b-4e11-b57a-eaee6a8043f2" />
+                        <input type="hidden" id="z1__UserName" name="[1].UserName" value="ko@hotmail.com" />
+                        <input type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="z1__IsSelected" name="[1].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z1__IsSelected">
+                            ko@hotmail.com
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z2__UserId" name="[2].UserId" value="52cc3244-8416-40a8-b9a9-e6f7c06db8d6" />
+                        <input type="hidden" id="z2__UserName" name="[2].UserName" value="Kev-mangkornkaew@hotmail.com" />
+                        <input type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="z2__IsSelected" name="[2].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z2__IsSelected">
+                            Kev-mangkornkaew@hotmail.com
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z3__UserId" name="[3].UserId" value="5802bcf4-8d5c-40f1-8def-ef7671cec1d2" />
+                        <input type="hidden" id="z3__UserName" name="[3].UserName" value="admin@admin.com" />
+                        <input type="checkbox" checked="checked" data-val="true" data-val-required="The IsSelected field is required." id="z3__IsSelected" name="[3].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z3__IsSelected">
+                            admin@admin.com
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z4__UserId" name="[4].UserId" value="64ea9362-a95d-42cb-80bc-a614ad1157a2" />
+                        <input type="hidden" id="z4__UserName" name="[4].UserName" value="test@test2.com" />
+                        <input type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="z4__IsSelected" name="[4].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z4__IsSelected">
+                            test@test2.com
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z5__UserId" name="[5].UserId" value="823bdcb8-6e23-40ab-8550-6811b14bd0d3" />
+                        <input type="hidden" id="z5__UserName" name="[5].UserName" value="Ke-mangkornkaew@hotmail.com" />
+                        <input type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="z5__IsSelected" name="[5].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z5__IsSelected">
+                            Ke-mangkornkaew@hotmail.com
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z6__UserId" name="[6].UserId" value="ae784249-8b8f-4e09-a6a0-b1ed6e19c4bb" />
+                        <input type="hidden" id="z6__UserName" name="[6].UserName" value="Testuser@hotmail.com" />
+                        <input type="checkbox" checked="checked" data-val="true" data-val-required="The IsSelected field is required." id="z6__IsSelected" name="[6].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z6__IsSelected">
+                            Testuser@hotmail.com
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z7__UserId" name="[7].UserId" value="c415ff71-50bf-4ee2-8458-94f28b02c4fa" />
+                        <input type="hidden" id="z7__UserName" name="[7].UserName" value="k_admin@hotmail.com" />
+                        <input type="checkbox" data-val="true" data-val-required="The IsSelected field is required." id="z7__IsSelected" name="[7].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z7__IsSelected">
+                            k_admin@hotmail.com
+                        </label>
+                    </li>
+                    <li class="imput-padding">
+                        <input type="hidden" id="z8__UserId" name="[8].UserId" value="f46761d1-2083-46ba-85ec-ef3610cc2c3c" />
+                        <input type="hidden" id="z8__UserName" name="[8].UserName" value="Kevi-mangkornkaew@hotmail.com" />
+                        <input type="checkbox" checked="checked" data-val="true" data-val-required="The IsSelected field is required." id="z8__IsSelected" name="[8].IsSelected" value="true" />
+                        <label class="editUserRoles__label" for="z8__IsSelected">
+                            Kevi-mangkornkaew@hotmail.com
+                        </label>
+                    </li>
+            </ul>
+            <div class="bottom-buttons">
+                <button type="submit" class="btn-regular btn-regular--small"><a href="/S_admin/manageCompanies.html">Update</a></button>
+                <a class="btn-regular btn-regular--small" href="/S_admin/manageCompanies.html">Cancel</a>
+            </div>
+        </div>
+    </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDOFUC95nUZtzrlWxvQ5cpz0FRxpJIioyRyISWybq0nqX1kTsaf6pw0KUNfvmA98VWoCcApFNGnkbhaJ4n8nKnjyn-Rn1v-vlilWH3Mqx6iYKUmFGQb6uyp4N4uv3zgokVG0YzHCJJ3p5dLcs-EnRa8Befs9_TWwObQXTgJvnydfWA" /><input name="[0].IsSelected" type="hidden" value="false" /><input name="[1].IsSelected" type="hidden" value="false" /><input name="[2].IsSelected" type="hidden" value="false" /><input name="[3].IsSelected" type="hidden" value="false" /><input name="[4].IsSelected" type="hidden" value="false" /><input name="[5].IsSelected" type="hidden" value="false" /><input name="[6].IsSelected" type="hidden" value="false" /><input name="[7].IsSelected" type="hidden" value="false" /><input name="[8].IsSelected" type="hidden" value="false" /></form>
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

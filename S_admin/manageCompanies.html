@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ListCompanies - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+    <nav class="main-menu">
+        <ul class="nav">
+            <li class="main-menu__item main-menu__item--logo">
+                <img src="/assets/images/StackITLogo.svg" />
+            </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/home.html">
+                                <img src="/assets/images/icons/Home.svg" />
+                                Home
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/manageUsers.html">
+                                <img src="/assets/images/icons/User.svg" />
+                                Manage Users
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark active" href="/S_admin/manageCompanies.html">
+                                <img src="/assets/images/icons/Companies.svg" />
+                                Manage Companies
+                            </a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a class="nav-link text-dark" href="/S_admin/manageRoles.html">
+                                <img src="/assets/images/icons/Key.svg" />
+                                Manage Roles
+                            </a>
+                        </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item active">
+                        <a href="/S_admin/manageCompanies.html">Manage Companies</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDP5aE-hi0ikLSaAfIB5Amuo0O3ZTyb_9xIcNm_vIzJfKROTrQacncx4-cfoBMGh9UwV7LnlCDH-9oqBMDpjk38rsO9f4JAUAtf_GbNL_jdEDMKRwsyHOH3vkEItEQs2K5ie1KH6lfjpIAc1fvqlc_OaJdgjA4QiwBxKrBUdu6wfcQ" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+
+    <header class="title-header">
+        <h1 class="title">Manage Companies</h1>
+        <span class="split"></span>
+        <div class="count">4</div>
+        
+    <div class="sortandsearch-wrapper">
+        <p class="sortby">Sort by: </p>
+        <select class="sort">
+            <option class="sortandsearch-option">Time Left</option>
+            <option class="sortandsearch-option">Uptime</option>
+            <option class="sortandsearch-option">Queue</option>
+            <option class="sortandsearch-option">Current</option>
+            <option class="sortandsearch-option">Items Left</option>
+        </select>
+        <form class="search">
+            <button class="soog-img" type="submit"><img src="/assets/images/icons/Soog.svg" /></button>
+            <input class="sortandsearch-input" type="search" placeholder="Search..." />
+        </form>
+    </div>
+
+    </header>
+
+<div class="table-view">
+
+    <a class="btn btn--orange btn-primary mb-3" style="width:auto" href="/S_admin/createCompany.html">
+        Add new Company
+    </a>
+
+        <table class="table">
+            <thead class="table__head">
+                <tr class="table__row table__row--head">
+                    <td class="table__data table__data--header table__data--start">CompanyId</td>
+                    <td class="table__data table__data--header">Company Name</td>
+                    <td class="table__data table__data--header">Phone Number</td>
+                    <td class="table__data table__data--header">Users</td>
+                    <td class="table__data table__data--header table__data--end">Action</td>
+                </tr>
+            </thead>
+
+
+
+
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--companies">Robotics</td>
+                        <td class="table__data">5</td>
+                        <td class="table__data">30517064</td>
+                        <td class="table__data">4</td>
+                        <td class="table__data table__data--end ">
+                            <a class="btn action action--edit" href="/S_admin/editCompany.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDP5aE-hi0ikLSaAfIB5Amuo0O3ZTyb_9xIcNm_vIzJfKROTrQacncx4-cfoBMGh9UwV7LnlCDH-9oqBMDpjk38rsO9f4JAUAtf_GbNL_jdEDMKRwsyHOH3vkEItEQs2K5ie1KH6lfjpIAc1fvqlc_OaJdgjA4QiwBxKrBUdu6wfcQ" /></form>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body expandible">
+                        <tr class="table__row">
+                            <td class="table__data table__data--start">
+                                Name
+                            </td>
+                            <td class="table__data table__data--end">
+                                Email
+                            </td>
+                        </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    Nina
+                                    Christensen
+                                </td>
+                                <td class="table__data table__data--end">
+                                    grafik@ninachristensen.dk
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    admin
+                                    admin
+                                </td>
+                                <td class="table__data table__data--end">
+                                    admin@admin.com
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    Kevin
+                                    Nielsen
+                                </td>
+                                <td class="table__data table__data--end">
+                                    Testuser@hotmail.com
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    Lars
+                                    Larsen
+                                </td>
+                                <td class="table__data table__data--end">
+                                    Kevi-mangkornkaew@hotmail.com
+                                </td>
+                            </tr>
+                </tbody>
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--companies">MergeCompany</td>
+                        <td class="table__data">7</td>
+                        <td class="table__data">28517064</td>
+                        <td class="table__data">1</td>
+                        <td class="table__data table__data--end ">
+                            <a class="btn action action--edit" href="/S_admin/editCompany.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDP5aE-hi0ikLSaAfIB5Amuo0O3ZTyb_9xIcNm_vIzJfKROTrQacncx4-cfoBMGh9UwV7LnlCDH-9oqBMDpjk38rsO9f4JAUAtf_GbNL_jdEDMKRwsyHOH3vkEItEQs2K5ie1KH6lfjpIAc1fvqlc_OaJdgjA4QiwBxKrBUdu6wfcQ" /></form>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body expandible">
+                        <tr class="table__row">
+                            <td class="table__data table__data--start">
+                                Name
+                            </td>
+                            <td class="table__data table__data--end">
+                                Email
+                            </td>
+                        </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    Jan
+                                    Jensen
+                                </td>
+                                <td class="table__data table__data--end">
+                                    operator@hotmail.com
+                                </td>
+                            </tr>
+                </tbody>
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--companies">TheEmptyCompany</td>
+                        <td class="table__data">8</td>
+                        <td class="table__data">1234</td>
+                        <td class="table__data">0</td>
+                        <td class="table__data table__data--end ">
+                            <a class="btn action action--edit" href="/S_admin/editCompany.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDP5aE-hi0ikLSaAfIB5Amuo0O3ZTyb_9xIcNm_vIzJfKROTrQacncx4-cfoBMGh9UwV7LnlCDH-9oqBMDpjk38rsO9f4JAUAtf_GbNL_jdEDMKRwsyHOH3vkEItEQs2K5ie1KH6lfjpIAc1fvqlc_OaJdgjA4QiwBxKrBUdu6wfcQ" /></form>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body expandible">
+                        <tr class="table__row table__row--sub">
+                            <td class="table__data table__data--start">
+                                There's currently no users assigned to this company
+                            </td>
+                        </tr>
+                </tbody>
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--companies">UCL-Robotics</td>
+                        <td class="table__data">9</td>
+                        <td class="table__data">21324354</td>
+                        <td class="table__data">3</td>
+                        <td class="table__data table__data--end ">
+                            <a class="btn action action--edit" href="/S_admin/editCompany.html"></a>
+                                <button type="submit" class="btn action action--delete"></button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDP5aE-hi0ikLSaAfIB5Amuo0O3ZTyb_9xIcNm_vIzJfKROTrQacncx4-cfoBMGh9UwV7LnlCDH-9oqBMDpjk38rsO9f4JAUAtf_GbNL_jdEDMKRwsyHOH3vkEItEQs2K5ie1KH6lfjpIAc1fvqlc_OaJdgjA4QiwBxKrBUdu6wfcQ" /></form>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body expandible">
+                        <tr class="table__row">
+                            <td class="table__data table__data--start">
+                                Name
+                            </td>
+                            <td class="table__data table__data--end">
+                                Email
+                            </td>
+                        </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    Alexander
+                                    Larsen
+                                </td>
+                                <td class="table__data table__data--end">
+                                    test-k_admin@hotmail.com
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    Mikkel
+                                    Jensen
+                                </td>
+                                <td class="table__data table__data--end">
+                                    test-k_operator@hotmail.com
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data table__data--start">
+                                    Ion
+                                    Toporan
+                                </td>
+                                <td class="table__data table__data--end">
+                                    test-s_admin@hotmail.com
+                                </td>
+                            </tr>
+                </tbody>
+
+        </table>
+</div>
+
+
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+
+    <script>
+        var collapsible = document.querySelectorAll(".collapsible");
+        var i;
+
+        for (i = 0; i < collapsible.length; i++) {
+            collapsible[i].addEventListener("click", function () {
+                var expandible = this.nextElementSibling;
+                if (expandible.style.display === "block") {
+                    expandible.style.display = "none";
+                    this.classList.remove('active');
+                } else {
+                    expandible.style.display = "block";
+                    this.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
