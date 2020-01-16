@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Machines - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/statistics.html">
+                            <img src="/assets/images/icons/Statistics.svg" />
+                            Statistics
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+            <li class="secondary-menu__item">
+                <a href="/K_operator/manageMachines.html">Manage Machines</a>
+            </li>
+            <li class="secondary-menu__item active">
+                <a href="/K_operator/createMachine.html">Add Machine</a>
+            </li>
+            <li class="secondary-menu__item">
+                <a href="/K_operator/addOperatorToMachine.html">Add Operator To Machine</a>
+            </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDMbmwbu_L1zMa1KGtHnGlOWqU-KNOmYrfm9coh9JWi36bKBOqPuVlowh3sxYSh07OJB2zwNtaU5FvIowt9nFR93-Hb00N4RvO1yxRiYh7YLqkuh4D7fOSc3Hoq2QPZITn7kQPHW0eaOJo9W9WvG8OjvBNMAf9K7EVz47rStELEndg" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+
+
+        <main role="main" class="view-content">
+            
+<header class="title-header">
+    <h1 class="title">Add machine</h1>
+</header>
+
+<form class="boxed-container" action="/CustomerAdmin/AddMachine" method="post">
+    
+    <div class="form-group">
+        <label class="control-label" for="MachineName">MachineName</label>
+        <input class="form-control" type="text" data-val="true" data-val-required="The MachineName field is required." id="MachineName" name="MachineName" value="" />
+        <span class="text-danger field-validation-valid" data-valmsg-for="MachineName" data-valmsg-replace="true"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="CompanyId">CompanyId</label>
+        <select class="form-control" data-val="true" data-val-required="The CompanyId field is required." id="CompanyId" name="CompanyId"><option value="5">Robotics</option>
+</select>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn-regular btn-regular--small"><a href="/K_operator/manageMachines.html">Create</a></button>
+    </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDOoysjfCTGNth8Ehpmd9MhFmIpHNq8nZiibnYw1s-Q0S52JU1omazee_xyggtO2B_h_twT7vBroCCXBQFZM0_NCmxY2mp0EvGl9n4midGfL6hM5l8QYL90v7XGIzsYnCe4-9sEqiYHtnWh2ZDfyMqGRx0htEN0n_oRtFRw2HVr4kg" /></form>
+ 
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

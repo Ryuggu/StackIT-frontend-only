@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark active" href="/K_operator/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/statistics.html">
+                            <img src="/assets/images/icons/Statistics.svg" />
+                            Statistics
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item active">
+                        <a href="/Operator">Dashboard</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDMbmwbu_L1zMa1KGtHnGlOWqU-KNOmYrfm9coh9JWi36bKBOqPuVlowh3sxYSh07OJB2zwNtaU5FvIowt9nFR93-Hb00N4RvO1yxRiYh7YLqkuh4D7fOSc3Hoq2QPZITn7kQPHW0eaOJo9W9WvG8OjvBNMAf9K7EVz47rStELEndg" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+<header class="title-header">
+    <h1 class="title">Dashboard (static page)</h1>
+</header>
+
+<div class="content-grid">
+    
+<div class="boxview boxview--error">
+    <header class="boxview__header">
+        <img class="boxview__icon" src="/assets/images/icons/warning.svg" />
+        <h3>Errors</h3>
+        <span class="number number--error">2</span>
+    </header>
+    <ul class="boxlist">
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Error: Jam</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Warning: Low Materials</span></li>
+    </ul>
+</div>
+
+<div class="boxview boxview--warning">
+    <header class="boxview__header">
+        <img class="boxview__icon" src="/assets/images/icons/Machine.svg" />
+        <h3>Machines Active</h3>
+        <span class="number">2</span>
+    </header>
+    <ul class="boxlist">
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #18</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #30</span></li>
+    </ul>
+</div>
+
+<div class="boxview">
+    <header class="boxview__header">
+        <img class="boxview__icon" src="/assets/images/icons/document_icon.svg" />
+        <h3>Pending Work</h3>
+        <span class="number num">5</span>
+    </header>
+    <ul class="boxlist">
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #105</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #19</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #20</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #105</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/Machine.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #63</span></li>
+    </ul>
+</div>
+
+<div class="boxview">
+    <header class="boxview__header">
+        <img class="boxview__icon" src="/assets/images/icons/pie-chart.svg" />
+        <h3>Completed Work This Week</h3>
+        <span class="number">19</span>
+    </header>
+    <ul class="boxlist">
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #2</span><span class="boxlist__item-value">Stack #10</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #15</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #16</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #2</span><span class="boxlist__item-value">Stack #38</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #203</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #105</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #3</span><span class="boxlist__item-value">Stack #15</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #3</span><span class="boxlist__item-value">Stack #16</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #120</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #2</span><span class="boxlist__item-value">Stack #30</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #105</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #19</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #20</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #3</span><span class="boxlist__item-value">Stack #105</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #63</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #2</span><span class="boxlist__item-value">Stack #105</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #4</span><span class="boxlist__item-value">Stack #19</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #1</span><span class="boxlist__item-value">Stack #20</span></li>
+        <li class="boxlist__item boxlist__item--machine"><img class="boxlist__item-icon" src="/assets/images/icons/document_icon.svg" /><span class="boxlist__item-title">Machine #3</span><span class="boxlist__item-value">Stack #105</span></li>
+    </ul>
+</div>
+    
+<div class="boxview boxview--addnew">
+    <h3>Add View to Dashboard</h3>
+    <img class="boxview__icon" src="/assets/images/icons/addviewtodash.svg" />
+</div>
+</div>
+
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+
+    <script src="/js/Index.js"></script>
+</body>
+</html>

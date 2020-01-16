@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Jobs - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark active" href="/K_operator/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/statistics.html">
+                            <img src="/assets/images/icons/Statistics.svg" />
+                            Statistics
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item active">
+                        <a href="/K_operator/manageJobs.html">Manage Jobs</a>
+                    </li>
+                    <li class="secondary-menu__item">
+                        <a href="/K_operator/activeJobs.html">Active Jobs</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDMbmwbu_L1zMa1KGtHnGlOWqU-KNOmYrfm9coh9JWi36bKBOqPuVlowh3sxYSh07OJB2zwNtaU5FvIowt9nFR93-Hb00N4RvO1yxRiYh7YLqkuh4D7fOSc3Hoq2QPZITn7kQPHW0eaOJo9W9WvG8OjvBNMAf9K7EVz47rStELEndg" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+
+<header class="title-header">
+    <h1 class="title">Manage jobs (stattic page)</h1>
+</header>
+
+<div class="listview listview--jobs">
+    <div class="listview__cell">
+        <p class="cell__title">Job Name</p>
+        <p class="cell__text cell__text--big">Unnamed job</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Time Left</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--time">3h 23m</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Batch Size</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--count">3000</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Assigned By</p>
+        <p class="cell__text cell__text--big">Kevin M</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__button listview__button--path" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/PATH_button.svg" alt="PATH"></div>
+    <div class="listview__button listview__button--cam" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/CAM_button.svg" alt="CAM"></div>
+</div>
+
+<div class="listview listview--jobs">
+    <div class="listview__cell">
+        <p class="cell__title">Job Name</p>
+        <p class="cell__text cell__text--big">Unnamed job</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Time Left</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--time">3h 21m</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Batch Size</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--count">2500</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Assigned By</p>
+        <p class="cell__text cell__text--big">Nina B</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__button listview__button--path" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/PATH_button.svg" alt="PATH"></div>
+    <div class="listview__button listview__button--cam" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/CAM_button.svg" alt="CAM"></div>
+</div>
+
+<div class="listview listview--jobs">
+    <div class="listview__cell">
+        <p class="cell__title">Job Name</p>
+        <p class="cell__text cell__text--big">Unnamed job</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Time Left</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--time">13h 22m</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Batch Size</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--count">4000</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Assigned By</p>
+        <p class="cell__text cell__text--big">Dennis J</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__button listview__button--path" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/PATH_button.svg" alt="PATH"></div>
+    <div class="listview__button listview__button--cam" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/CAM_button.svg" alt="CAM"></div>
+</div>
+
+<div class="listview listview--jobs">
+    <div class="listview__cell">
+        <p class="cell__title">Job Name</p>
+        <p class="cell__text cell__text--big">Unnamed job</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Time Left</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--time">1h 41m</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Batch Size</p>
+        <div class="cell__field">
+            <p class="cell__value cell__value--count">1000</p>
+        </div>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__cell">
+        <p class="cell__title">Assigned By</p>
+        <p class="cell__text cell__text--big">Darek S</p>
+    </div>
+    <div class="cell__separator"></div>
+    <div class="listview__button listview__button--path" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/PATH_button.svg" alt="PATH"></div>
+    <div class="listview__button listview__button--cam" style="cursor: pointer;" onclick="window.location='#';"><img src="/assets/images/icons/CAM_button.svg" alt="CAM"></div>
+</div>
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

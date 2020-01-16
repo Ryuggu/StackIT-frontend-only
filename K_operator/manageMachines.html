@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Machines - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark active" href="/K_operator/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_operator/statistics.html">
+                            <img src="/assets/images/icons/Statistics.svg" />
+                            Statistics
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+            <li class="secondary-menu__item active">
+                <a href="/K_operator/manageMachines.html">Manage Machines</a>
+            </li>
+            <li class="secondary-menu__item">
+                <a href="/K_operator/createMachine.html">Add Machine</a>
+            </li>
+            <li class="secondary-menu__item">
+                <a href="/K_operator/addOperatorToMachine.html">Add Operator To Machine</a>
+            </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDMbmwbu_L1zMa1KGtHnGlOWqU-KNOmYrfm9coh9JWi36bKBOqPuVlowh3sxYSh07OJB2zwNtaU5FvIowt9nFR93-Hb00N4RvO1yxRiYh7YLqkuh4D7fOSc3Hoq2QPZITn7kQPHW0eaOJo9W9WvG8OjvBNMAf9K7EVz47rStELEndg" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+<h1>Manage Machines</h1>
+        <div id="listview" class="listview listview--machines">
+            <div class="listview__cell">
+                <p class="cell__title--big">Robo2</p>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Overall Time Left</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--time"></p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Uptime</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--time"></p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Jobs In Queue</p>
+                <div class="cell__field">
+                    <p class="cell__value">
+                            <span>0</span>
+                    </p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Current Job</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--time"></p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Items Left</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--count"></p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="btn btn--operators">
+                View Jobs
+            </div>
+        </div>
+            <table class="list-dropdown">
+                <tbody class="list-dropdown__body">
+                    <tr class="row">
+                        <td class="data">
+                            There's currently no jobs assigned to this machine'
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+
+    <script>
+        var collapsible = document.querySelectorAll(".btn--operators");
+        var i;
+
+        for (i = 0; i < collapsible.length; i++) {
+            collapsible[i].addEventListener("click", function () {
+                var expandible = this.parentElement.nextElementSibling;
+                if (expandible.style.display === "table") {
+                    expandible.style.display = "none";
+                    this.classList.remove('active');
+                } else {
+                    expandible.style.display = "table";
+                    this.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
