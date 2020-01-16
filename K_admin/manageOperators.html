@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Roles - StackItWebApp</title>
+    <title>Manage Operators - StackItWebApp</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
@@ -17,31 +17,32 @@
             <img src="/assets/images/StackITLogo.svg" />
         </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/home.html">
+                        <a class="nav-link text-dark" href="/k_admin/home.html">
                             <img src="/assets/images/icons/Home.svg" />
                             Home
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/manageUsers.html">
+                        <a class="nav-link text-dark active" href="/k_admin/manageOperators.html">
                             <img src="/assets/images/icons/User.svg" />
-                            Manage Users
+                            Manage Operators
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/manageCompanies.html">
-                            <img src="/assets/images/icons/Companies.svg" />
-                            Manage Companies
+                        <a class="nav-link text-dark" href="/k_admin/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark active" href="/S_admin/manageRoles.html">
-                            <img src="/assets/images/icons/Key.svg" />
-                            Manage Roles
+                        <a class="nav-link text-dark" href="/k_admin/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
                         </a>
                     </li>
     </ul>
 </nav>
+
 
 
 
@@ -56,10 +57,7 @@
     <nav class="secondary-menu">
         <ul class="nav">
                     <li class="secondary-menu__item active">
-                        <a href="/Administration/ListRoles">Manage Roles</a>
-                    </li>
-                    <li class="secondary-menu__item">
-                        <a href="/Administration/CreateRole">Add Role</a>
+                        <a href="/k_admin/manageOperators.html">Manage Operators</a>
                     </li>
         </ul>
         
@@ -85,7 +83,7 @@
             <footer class="profile-dropdown__footer">
                 <a class="help">Help</a>
                 <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
-                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO5OABqgWFR1HFeXlOmVd17oX8w87j1C1sVyWqfKMA3j7SLGuLePHiXMjoGgUrooTfelck-LdtbJtXJrQw6VyEx26c5lk0Bmk6dLHIm9j28cNv-dJ4SGFtUokfZHYs12QgGgPz0TMvNyCh1bKrWDKNggrL3ksSnbw9SyVlG44Nsyw" /></form>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO2HiQTrY6MvTRM5LgxJWFdOD9Yl3VCzFxj4Lrl_C-v8S4TYVXOrfVbyPjnZ2t4rV7JaOTnS4JUe1zpxa1WxzlHPaO0W_oojZrK7R3V6BbmbQIhWoenWapfjaOhYvHMYwTTKbYpn45iEH2O_zNWySWOzw8HSTELZXhRANEaWCO-lg" /></form>
             </footer>
         </div>
 
@@ -98,33 +96,49 @@
 
         <main role="main" class="view-content">
             
+    <header class="title-header">
+        <h1 class="title">Manage Operators</h1>
+        <span class="split"></span>
+        <div class="count">2</div>
+    </header>
 
-<header class="title-header">
-    <h1 class="title">Manage Roles</h1>
-</header>
+    <div class="table-view">
 
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : 143bcadb-cfb3-41f5-bb1e-885431119d9e</p>
-            <p class="manageRoles--list">Role Name : k_admin</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
-            </div>
-        </div>
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : 5fb4913a-9c68-4771-a806-9b318a3a0f51</p>
-            <p class="manageRoles--list">Role Name : k_operator</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
-            </div>
-        </div>
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : aa1d14b0-21b2-40ce-aec4-11ba362cc3c1</p>
-            <p class="manageRoles--list">Role Name : s_admin</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
-            </div>
-        </div>
+            <a class="btn-regular--bottom-right mb-3" style="width:auto" href="/register.html">
+                Add new Operator
+            </a>
+            <table class="table">
+                <thead class="table__head">
+                    <tr class="table__row table__row--head">
+                        <td class="table__data table__data--header table__data--start">Name</td>
+                        <td class="table__data table__data--header">Email</td>
+                        <td class="table__data table__data--header">Id</td>
+                        <td class="table__data table__data--header table__data--end">Action</td>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
 
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">Nina Christensen</td>
+                            <td class="table__data">grafik@ninachristensen.dk</td>
+                            <td class="table__data">2c23a034-3757-4868-bb84-f60bae6a4843</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="/k_admin/editUser.html"></a>
+                                <a href="#" class="btn action action--delete"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data table__data--start table__data--icon table__data--icon--user">Kevin Nielsen</td>
+                            <td class="table__data">Testuser@hotmail.com</td>
+                            <td class="table__data">ae784249-8b8f-4e09-a6a0-b1ed6e19c4bb</td>
+                            <td class="table__data table__data--end ">
+                                <a class="btn action action--edit" href="/k_admin/editUser.html"></a>
+                                <a href="#" class="btn action action--delete"></a>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+    </div>
         </main>
 
         <section>

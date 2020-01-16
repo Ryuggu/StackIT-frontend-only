@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Job - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_admin/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/k_admin/manageOperators.html">
+                            <img src="/assets/images/icons/User.svg" />
+                            Manage Operators
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/k_admin/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/k_admin/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item">
+                        <a href="/K_admin/home.html">Dashboard</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO2HiQTrY6MvTRM5LgxJWFdOD9Yl3VCzFxj4Lrl_C-v8S4TYVXOrfVbyPjnZ2t4rV7JaOTnS4JUe1zpxa1WxzlHPaO0W_oojZrK7R3V6BbmbQIhWoenWapfjaOhYvHMYwTTKbYpn45iEH2O_zNWySWOzw8HSTELZXhRANEaWCO-lg" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+    <header class="title-header">
+        <h1 class="title">Create Job</h1>
+    </header>
+
+    <div class="row boxed-container">
+        <h2>Job</h2>
+        <div class="col-md-4">
+            <form action="/CustomerAdmin/CreateJob" method="post">
+                
+                <div class="form-group">
+                    <label class="control-label" for="JobName">Job name</label>
+                    <input class="form-control" type="text" id="JobName" name="JobName" value="" />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="JobName" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="BatchSize">Batch size</label>
+                    <input class="form-control" type="number" data-val="true" data-val-required="The BatchSize field is required." id="BatchSize" name="BatchSize" value="" />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="BatchSize" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="StartDate">Start date</label>
+                    <input class="form-control" type="datetime-local" data-val="true" data-val-required="The StartDate field is required." id="StartDate" name="StartDate" value="" />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="StartDate" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="EndDate">End date</label>
+                    <input class="form-control" type="datetime-local" data-val="true" data-val-required="The EndDate field is required." id="EndDate" name="EndDate" value="" />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="EndDate" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="UserId">Assign To Operator:</label>
+                    <select class="form-control" id="UserId" name="UserId"><option value="2c23a034-3757-4868-bb84-f60bae6a4843">Nina</option>
+<option value="ae784249-8b8f-4e09-a6a0-b1ed6e19c4bb">Kevin</option>
+</select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="MachineId">Machine ID</label>
+                    <select class="form-control" data-val="true" data-val-required="The MachineId field is required." id="MachineId" name="MachineId"><option value="12">Robotics#324</option>
+<option value="14">Robo2</option>
+</select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-regular btn-regular--small"><a href="/K_admin/manageJobs.html">Create</a></button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDMQgT7oY3dJfu_oXBYmLPm7hAXlXLbuTdBoETHbiA-qgz4Vq0Fb6yvb84dl07h-h2snrImlHF1mbf6OMn7fYKtKHkDKgmtz9ir4LRv9TP4mzuKw_mLf2zm5_clPExdjtBvahYytUVKFDu27NYV94dHxxqYG8zJCMTgLv9qW1cOung" /></form>
+        </div>
+    </div>
+
+<div>
+    <a class="btn-regular--bottom-right" href="/k_admin/manageJobs.html">Back to List</a>
+</div>
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+</body>
+</html>

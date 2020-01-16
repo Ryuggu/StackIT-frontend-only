@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Jobs - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_admin/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/k_admin/manageOperators.html">
+                            <img src="/assets/images/icons/User.svg" />
+                            Manage Operators
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/k_admin/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark active" href="/k_admin/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+    <nav class="secondary-menu">
+        <ul class="nav">
+                    <li class="secondary-menu__item active">
+                        <a href="/k_admin/manageJobs.html">Manage Jobs</a>
+                    </li>
+        </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO2HiQTrY6MvTRM5LgxJWFdOD9Yl3VCzFxj4Lrl_C-v8S4TYVXOrfVbyPjnZ2t4rV7JaOTnS4JUe1zpxa1WxzlHPaO0W_oojZrK7R3V6BbmbQIhWoenWapfjaOhYvHMYwTTKbYpn45iEH2O_zNWySWOzw8HSTELZXhRANEaWCO-lg" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+<header class="title-header">
+    <h1 class="title">Manage Jobs</h1>
+    <span class="split"></span>
+    <div class="count count--job">5</div>
+</header>
+
+<div class="table-view">
+
+    <a class="btn btn--orange btn-primary mb-3" style="width:auto" href="/k_admin/createJob.html">
+        Add new Job
+    </a>
+
+        <table class="table">
+            <thead class="table__head">
+                <tr class="table__row table__row--head">
+                    <td class="table__data table__data--header table__data--start">JobName</td>
+                    <td class="table__data table__data--header">BatchSize</td>
+                    <td class="table__data table__data--header">StartDate</td>
+                    <td class="table__data table__data--header">EndDate</td>
+                    <td class="table__data table__data--header">Assigned To</td>
+                    <td class="table__data table__data--header">Machine</td>
+                    <td class="table__data table__data--header table__data--end">Action</td>
+                </tr>
+            </thead>
+
+
+
+
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--jobs">TestJobNina</td>
+                        <td class="table__data">100</td>
+                        <td class="table__data">12/13/2019 5:05:00 AM</td>
+                        <td class="table__data">12/23/2019 4:04:00 AM</td>
+                        <td class="table__data">Nina Christensen</td>
+                        <td class="table__data">Robo2</td>
+                        <td class="table__data table__data--end ">
+                            <a href="#" class="btn action action--delete"></a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--jobs">AnotherJobNina</td>
+                        <td class="table__data">524</td>
+                        <td class="table__data">12/18/2019 5:05:00 AM</td>
+                        <td class="table__data">12/23/2019 5:05:00 AM</td>
+                        <td class="table__data">Nina Christensen</td>
+                        <td class="table__data">Robotics#324</td>
+                        <td class="table__data table__data--end ">
+                            <a href="#" class="btn action action--delete"></a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--jobs">Extrude Pipe</td>
+                        <td class="table__data">500</td>
+                        <td class="table__data">12/19/2019 5:05:00 AM</td>
+                        <td class="table__data">12/25/2019 5:05:00 AM</td>
+                        <td class="table__data">Nina Christensen</td>
+                        <td class="table__data">Robo2</td>
+                        <td class="table__data table__data--end ">
+                            <a href="#" class="btn action action--delete"></a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--jobs">new job</td>
+                        <td class="table__data">32</td>
+                        <td class="table__data">12/6/2019 12:22:00 PM</td>
+                        <td class="table__data">12/7/2019 1:44:00 PM</td>
+                        <td class="table__data">Kevin Nielsen</td>
+                        <td class="table__data">Robo2</td>
+                        <td class="table__data table__data--end ">
+                            <a href="#" class="btn action action--delete"></a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="table__body collapsible">
+                    <tr class="table__row">
+                        <td class="table__data table__data--start table__data--icon table__data--icon--jobs">1</td>
+                        <td class="table__data">1</td>
+                        <td class="table__data">12/12/2019 11:11:00 AM</td>
+                        <td class="table__data">12/20/2019 11:11:00 AM</td>
+                        <td class="table__data">Nina Christensen</td>
+                        <td class="table__data">Robo2</td>
+                        <td class="table__data table__data--end ">
+                            <a href="#" class="btn action action--delete"></a>
+                        </td>
+                    </tr>
+                </tbody>
+
+
+        </table>
+</div>
+
+
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+
+  
+</body>
+</html>

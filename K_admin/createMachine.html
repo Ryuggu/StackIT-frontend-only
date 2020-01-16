@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Roles - StackItWebApp</title>
+    <title>Create Machine - StackItWebApp</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
@@ -17,31 +17,32 @@
             <img src="/assets/images/StackITLogo.svg" />
         </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/home.html">
+                        <a class="nav-link text-dark" href="/K_admin/home.html">
                             <img src="/assets/images/icons/Home.svg" />
                             Home
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/manageUsers.html">
+                        <a class="nav-link text-dark" href="/k_admin/manageOperators.html">
                             <img src="/assets/images/icons/User.svg" />
-                            Manage Users
+                            Manage Operators
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/manageCompanies.html">
-                            <img src="/assets/images/icons/Companies.svg" />
-                            Manage Companies
+                        <a class="nav-link text-dark" href="/k_admin/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark active" href="/S_admin/manageRoles.html">
-                            <img src="/assets/images/icons/Key.svg" />
-                            Manage Roles
+                        <a class="nav-link text-dark" href="/k_admin/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
                         </a>
                     </li>
     </ul>
 </nav>
+
 
 
 
@@ -55,11 +56,8 @@
 
     <nav class="secondary-menu">
         <ul class="nav">
-                    <li class="secondary-menu__item active">
-                        <a href="/Administration/ListRoles">Manage Roles</a>
-                    </li>
                     <li class="secondary-menu__item">
-                        <a href="/Administration/CreateRole">Add Role</a>
+                        <a href="/K_admin/home.html">Dashboard</a>
                     </li>
         </ul>
         
@@ -85,7 +83,7 @@
             <footer class="profile-dropdown__footer">
                 <a class="help">Help</a>
                 <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
-                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO5OABqgWFR1HFeXlOmVd17oX8w87j1C1sVyWqfKMA3j7SLGuLePHiXMjoGgUrooTfelck-LdtbJtXJrQw6VyEx26c5lk0Bmk6dLHIm9j28cNv-dJ4SGFtUokfZHYs12QgGgPz0TMvNyCh1bKrWDKNggrL3ksSnbw9SyVlG44Nsyw" /></form>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO2HiQTrY6MvTRM5LgxJWFdOD9Yl3VCzFxj4Lrl_C-v8S4TYVXOrfVbyPjnZ2t4rV7JaOTnS4JUe1zpxa1WxzlHPaO0W_oojZrK7R3V6BbmbQIhWoenWapfjaOhYvHMYwTTKbYpn45iEH2O_zNWySWOzw8HSTELZXhRANEaWCO-lg" /></form>
             </footer>
         </div>
 
@@ -96,35 +94,30 @@
 
 
 
+
         <main role="main" class="view-content">
             
-
 <header class="title-header">
-    <h1 class="title">Manage Roles</h1>
+    <h1 class="title">Add machine</h1>
 </header>
 
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : 143bcadb-cfb3-41f5-bb1e-885431119d9e</p>
-            <p class="manageRoles--list">Role Name : k_admin</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
-            </div>
-        </div>
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : 5fb4913a-9c68-4771-a806-9b318a3a0f51</p>
-            <p class="manageRoles--list">Role Name : k_operator</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
-            </div>
-        </div>
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : aa1d14b0-21b2-40ce-aec4-11ba362cc3c1</p>
-            <p class="manageRoles--list">Role Name : s_admin</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
-            </div>
-        </div>
-
+<form class="boxed-container" action="/CustomerAdmin/AddMachine" method="post">
+    
+    <div class="form-group">
+        <label class="control-label" for="MachineName">MachineName</label>
+        <input class="form-control" type="text" data-val="true" data-val-required="The MachineName field is required." id="MachineName" name="MachineName" value="" />
+        <span class="text-danger field-validation-valid" data-valmsg-for="MachineName" data-valmsg-replace="true"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="CompanyId">CompanyId</label>
+        <select class="form-control" data-val="true" data-val-required="The CompanyId field is required." id="CompanyId" name="CompanyId"><option value="5">Robotics</option>
+</select>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn-regular btn-regular--small"><a href="/K_admin/manageMachines.html">Create</a></button>
+    </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDOoysjfCTGNth8Ehpmd9MhFmIpHNq8nZiibnYw1s-Q0S52JU1omazee_xyggtO2B_h_twT7vBroCCXBQFZM0_NCmxY2mp0EvGl9n4midGfL6hM5l8QYL90v7XGIzsYnCe4-9sEqiYHtnWh2ZDfyMqGRx0htEN0n_oRtFRw2HVr4kg" /></form>
+ 
         </main>
 
         <section>

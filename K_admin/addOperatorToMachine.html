@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Roles - StackItWebApp</title>
+    <title>Add Operator To Machine - StackItWebApp</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
@@ -17,27 +17,27 @@
             <img src="/assets/images/StackITLogo.svg" />
         </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/home.html">
+                        <a class="nav-link text-dark" href="/K_admin/home.html">
                             <img src="/assets/images/icons/Home.svg" />
                             Home
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/manageUsers.html">
+                        <a class="nav-link text-dark" href="/k_admin/manageOperators.html">
                             <img src="/assets/images/icons/User.svg" />
-                            Manage Users
+                            Manage Operators
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark" href="/S_admin/manageCompanies.html">
-                            <img src="/assets/images/icons/Companies.svg" />
-                            Manage Companies
+                        <a class="nav-link text-dark" href="/k_admin/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
                         </a>
                     </li>
                     <li class="main-menu__item">
-                        <a class="nav-link text-dark active" href="/S_admin/manageRoles.html">
-                            <img src="/assets/images/icons/Key.svg" />
-                            Manage Roles
+                        <a class="nav-link text-dark" href="/k_admin/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
                         </a>
                     </li>
     </ul>
@@ -49,19 +49,20 @@
 
 
 
+
     </header>
     <div class="content">
         
 
-    <nav class="secondary-menu">
-        <ul class="nav">
-                    <li class="secondary-menu__item active">
-                        <a href="/Administration/ListRoles">Manage Roles</a>
-                    </li>
+        <nav class="secondary-menu">
+            <ul class="nav">
                     <li class="secondary-menu__item">
-                        <a href="/Administration/CreateRole">Add Role</a>
+                        <a href="/K_admin/manageMachines.html">Manage Machines</a>
                     </li>
-        </ul>
+                    <li class="secondary-menu__item active">
+                        <a href="/K_admin/addOperatorToMachine.html">Add Operator To Machine</a>
+                    </li>
+            </ul>
         
 
     <div class="profile" onclick="expandProfile()">
@@ -85,7 +86,7 @@
             <footer class="profile-dropdown__footer">
                 <a class="help">Help</a>
                 <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
-                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO5OABqgWFR1HFeXlOmVd17oX8w87j1C1sVyWqfKMA3j7SLGuLePHiXMjoGgUrooTfelck-LdtbJtXJrQw6VyEx26c5lk0Bmk6dLHIm9j28cNv-dJ4SGFtUokfZHYs12QgGgPz0TMvNyCh1bKrWDKNggrL3ksSnbw9SyVlG44Nsyw" /></form>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO2HiQTrY6MvTRM5LgxJWFdOD9Yl3VCzFxj4Lrl_C-v8S4TYVXOrfVbyPjnZ2t4rV7JaOTnS4JUe1zpxa1WxzlHPaO0W_oojZrK7R3V6BbmbQIhWoenWapfjaOhYvHMYwTTKbYpn45iEH2O_zNWySWOzw8HSTELZXhRANEaWCO-lg" /></form>
             </footer>
         </div>
 
@@ -100,30 +101,37 @@
             
 
 <header class="title-header">
-    <h1 class="title">Manage Roles</h1>
+    <h1 class="title">Add user to machine</h1>
 </header>
 
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : 143bcadb-cfb3-41f5-bb1e-885431119d9e</p>
-            <p class="manageRoles--list">Role Name : k_admin</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
+<div class="row boxed-container">
+    <div class="col-md-4">
+        <form action="/CustomerAdmin/AddUserMachine" method="post">
+            
+            <div class="form-group">
+                <label class="control-label" for="UserId">UserId</label>
+                <select class="form-control" id="UserId" name="UserId"><option value="2c23a034-3757-4868-bb84-f60bae6a4843">Nina</option>
+<option value="5802bcf4-8d5c-40f1-8def-ef7671cec1d2">admin</option>
+<option value="ae784249-8b8f-4e09-a6a0-b1ed6e19c4bb">Kevin</option>
+<option value="f46761d1-2083-46ba-85ec-ef3610cc2c3c">Lars</option>
+</select>
             </div>
-        </div>
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : 5fb4913a-9c68-4771-a806-9b318a3a0f51</p>
-            <p class="manageRoles--list">Role Name : k_operator</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
+            <div class="form-group">
+                <label class="control-label" for="MachineId">MachineId</label>
+                <select class="form-control" data-val="true" data-val-required="The MachineId field is required." id="MachineId" name="MachineId"><option value="12">Robotics#324</option>
+<option value="14">Robo2</option>
+</select>
             </div>
-        </div>
-        <div class="role-container">
-            <p class="manageRoles--list">Role Id : aa1d14b0-21b2-40ce-aec4-11ba362cc3c1</p>
-            <p class="manageRoles--list">Role Name : s_admin</p>
-            <div class="bottom-buttons">
-                <a class="btn-regular btn-regular--small" href="/S_admin/editRole.html">Edit</a>
+            <div class="form-group">
+                <button type="submit" class="btn-regular btn-regular--small"><a href="/K_admin/manageMachines.html">Create</a></button>
             </div>
-        </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDNGwpCAulLpdxDk9iNi26HE7mpwqrYj239PTDWG9GxCEAvc_JjWdiqG5ztj7Teep5gONwSwvJYudVD4Omnv8KDWff6I9cwMURokRxz1CEqmDR9TOmAU6ku9fxmL-PglefN45sv9I7vDTfK33ylPt2h7VPM3a-jGfPV_ezwihVbMUQ" /></form>
+    </div>
+</div>
+
+<div>
+    <a class="btn-regular--bottom-back" href="/K_admin/manageMachines.html">Back to Manage Machines</a>
+</div>
 
         </main>
 

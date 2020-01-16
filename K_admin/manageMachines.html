@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Machines - StackItWebApp</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <header>
+        
+
+<nav class="main-menu">
+    <ul class="nav">
+        <li class="main-menu__item main-menu__item--logo">
+            <img src="/assets/images/StackITLogo.svg" />
+        </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/K_admin/home.html">
+                            <img src="/assets/images/icons/Home.svg" />
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/k_admin/manageOperators.html">
+                            <img src="/assets/images/icons/User.svg" />
+                            Manage Operators
+                        </a>
+                    </li>
+                    <li class="main-menu__item active">
+                        <a class="nav-link text-dark" href="/k_admin/manageMachines.html">
+                            <img src="/assets/images/icons/Machine.svg" />
+                            Manage Machines
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a class="nav-link text-dark" href="/k_admin/manageJobs.html">
+                            <img src="/assets/images/icons/Job.svg" />
+                            Manage Jobs
+                        </a>
+                    </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+    </header>
+    <div class="content">
+        
+
+        <nav class="secondary-menu">
+            <ul class="nav">
+                    <li class="secondary-menu__item active">
+                        <a href="/K_admin/manageMachines.html">Manage Machines</a>
+                    </li>
+                    <li class="secondary-menu__item">
+                        <a href="/K_admin/addOperatorToMachine.html">Add Operator To Machine</a>
+                    </li>
+            </ul>
+        
+
+    <div class="profile" onclick="expandProfile()">
+        <div class="profile__name">
+            admin
+            admin
+        </div>
+        <div class="profile__img"></div>
+
+        <div class="profile-dropdown">
+            <header class="profile-dropdown__header">
+                <div class="profile-img"></div>
+                <div>
+                    <p class="name">
+                        admin
+                        admin
+                    </p>
+                    <p class="email">admin@admin.com</p>
+                </div>
+            </header>
+            <footer class="profile-dropdown__footer">
+                <a class="help">Help</a>
+                <a href="/login.html"> <button class="logout" type="submit">Logout</button></a>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BRK2vmdLTBAob8sf27nVDO2HiQTrY6MvTRM5LgxJWFdOD9Yl3VCzFxj4Lrl_C-v8S4TYVXOrfVbyPjnZ2t4rV7JaOTnS4JUe1zpxa1WxzlHPaO0W_oojZrK7R3V6BbmbQIhWoenWapfjaOhYvHMYwTTKbYpn45iEH2O_zNWySWOzw8HSTELZXhRANEaWCO-lg" /></form>
+            </footer>
+        </div>
+
+    </div>
+
+    </nav>
+
+
+
+
+        <main role="main" class="view-content">
+            
+<header class="title-header">
+    <h1 class="title">Manage Machines</h1>
+    <span class="split"></span>
+    <div class="count count--machine">2</div>
+</header>
+
+<a class="btn-regular--bottom-right mb-3" style="width:auto" href="/K_admin/createMachine.html">
+    Add machine
+</a>
+
+        <div id="listview" class="listview listview--machines">
+            <div class="listview__cell">
+                <p class="cell__title--big">Robotics#324</p>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Id</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--time">12</p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Operators</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--count">1</p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="btn btn--operators">
+                View Operators
+            </div>
+        </div>
+            <table class="list-dropdown">
+                <thead class="list-dropdown__header">
+                    <tr class="row">
+                        <td class="data">
+                            Name
+                        </td>
+                        <td class="data">
+                            Email
+                        </td>
+                        <td class="data">
+                            id
+                        </td>
+                    </tr>
+                </thead>
+
+                    <tbody class="list-dropdown__body">
+                        <tr class="row">
+                            <td class="data data--icon data--icon--user">
+                                Lars
+                                Larsen
+                            </td>
+                            <td class="data">
+                                Kevi-mangkornkaew@hotmail.com
+                            </td>
+                            <td class="data">
+                                f46761d1-2083-46ba-85ec-ef3610cc2c3c
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+        <div id="listview" class="listview listview--machines">
+            <div class="listview__cell">
+                <p class="cell__title--big">Robo2</p>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Id</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--time">14</p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="listview__cell">
+                <p class="cell__title">Operators</p>
+                <div class="cell__field">
+                    <p class="cell__value cell__value--count">3</p>
+                </div>
+            </div>
+            <div class="cell__separator"></div>
+            <div class="btn btn--operators">
+                View Operators
+            </div>
+        </div>
+            <table class="list-dropdown">
+                <thead class="list-dropdown__header">
+                    <tr class="row">
+                        <td class="data">
+                            Name
+                        </td>
+                        <td class="data">
+                            Email
+                        </td>
+                        <td class="data">
+                            id
+                        </td>
+                    </tr>
+                </thead>
+
+                    <tbody class="list-dropdown__body">
+                        <tr class="row">
+                            <td class="data data--icon data--icon--user">
+                                admin
+                                admin
+                            </td>
+                            <td class="data">
+                                admin@admin.com
+                            </td>
+                            <td class="data">
+                                5802bcf4-8d5c-40f1-8def-ef7671cec1d2
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="list-dropdown__body">
+                        <tr class="row">
+                            <td class="data data--icon data--icon--user">
+                                Kevin
+                                Nielsen
+                            </td>
+                            <td class="data">
+                                Testuser@hotmail.com
+                            </td>
+                            <td class="data">
+                                ae784249-8b8f-4e09-a6a0-b1ed6e19c4bb
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="list-dropdown__body">
+                        <tr class="row">
+                            <td class="data data--icon data--icon--user">
+                                Lars
+                                Larsen
+                            </td>
+                            <td class="data">
+                                Kevi-mangkornkaew@hotmail.com
+                            </td>
+                            <td class="data">
+                                f46761d1-2083-46ba-85ec-ef3610cc2c3c
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+
+
+
+
+
+        </main>
+
+        <section>
+          <!-- <partial name="~/Views/Partials/_FormPartials.cshtml" /> -->
+        </section>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.main-menu .nav').find('.active').removeClass('active');
+            $('.main-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var url = window.location;
+            $('.secondary-menu .nav').find('.active').removeClass('active');
+            $('.secondary-menu .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        function expandProfile() {
+            const dropDown = document.querySelector('.profile-dropdown');
+            if (dropDown.classList.contains('expanded')) {
+                dropDown.classList.remove('expanded');
+            } else {
+                dropDown.classList.add('expanded');
+            }
+        }
+    </script>
+
+
+
+    <script>
+        var collapsible = document.querySelectorAll(".btn--operators");
+        var i;
+
+        for (i = 0; i < collapsible.length; i++) {
+            collapsible[i].addEventListener("click", function () {
+                var expandible = this.parentElement.nextElementSibling;
+                if (expandible.style.display === "table") {
+                    expandible.style.display = "none";
+                    this.classList.remove('active');
+                } else {
+                    expandible.style.display = "table";
+                    this.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
